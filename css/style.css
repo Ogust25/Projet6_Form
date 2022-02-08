@@ -7,16 +7,27 @@ body {
   flex-direction: row-reverse;
 }
 
+/* Formulaire */
 .mainBox {
   width: 50%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #FFFDD6;
   font-family: "El Messiri", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 85%;
 }
-
+.mainBox header {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 40px;
+}
+.mainBox header h1 {
+  border-bottom: 2px solid black;
+  margin: 0 30px;
+}
+/* Image de gauche + lien artiste */
 aside {
   width: 50%;
   display: flex;
@@ -28,8 +39,8 @@ aside {
   font-family: "Skranji", sans-serif;
 }
 aside img {
-  height: 80%;
-  width: auto;
+  max-height: 80%;
+  max-width: 80%;
 }
 aside a[href] {
   width: 100%;
@@ -37,6 +48,7 @@ aside a[href] {
   text-align: left;
   text-decoration: none;
   color: #FFFFFF;
+  font-size: 24px;
 }
 aside a[href]:hover {
   text-decoration: underline;
