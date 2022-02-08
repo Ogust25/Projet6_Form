@@ -1,4 +1,31 @@
+$backColor: #000000;
+$mainColor: #FFFDD6;
+$txtWhite: #FFFFFF;
+
 body{
+    width: 100%;
+    height: 100vh;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.mainBox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $mainColor;
+    font-family: 'El Messiri', sans-serif;
+}
+aside{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $backColor;
+    color: $txtWhite;
+    font-family: 'Skranji', sans-serif;
 }
