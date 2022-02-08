@@ -1,5 +1,7 @@
 $backColor: #000000;
 $mainColor: #FFFDD6;
+
+$txtBlue: #3C9EC8;
 $txtWhite: #FFFFFF;
 
 body{
@@ -28,4 +30,19 @@ aside{
     background-color: $backColor;
     color: $txtWhite;
     font-family: 'Skranji', sans-serif;
+    img{
+        height: 80%;
+        width: auto;
+    }
+    a[href]{
+        width: 100%;
+        margin-left: 5%;
+        text-align: left;
+        text-decoration: none;
+        color: $txtWhite;
+        &:hover{
+            text-decoration: underline;
+            color: $txtBlue;
+        }
+    }
 }

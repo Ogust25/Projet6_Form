@@ -26,4 +26,19 @@ aside {
   background-color: #000000;
   color: #FFFFFF;
   font-family: "Skranji", sans-serif;
+}
+aside img {
+  height: 80%;
+  width: auto;
+}
+aside a[href] {
+  width: 100%;
+  margin-left: 5%;
+  text-align: left;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+aside a[href]:hover {
+  text-decoration: underline;
+  color: #3C9EC8;
 }/*# sourceMappingURL=style.css.map */
