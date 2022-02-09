@@ -11,25 +11,28 @@
 <body>
     <div class="mainBox">
         <header>
-            <h1>----- Title ! -----</h1>
+            <h1>----- Plouf ! -----</h1>
         </header>
         <main>
             <h2>Contactez nous !</h2>
             <form action="">
-                <p class="txtError">Truc non-valide</p>
-                <input placeholder="Nom" type="text" id="inputNom">
-    
-                <p class="txtError">Truc non-valide</p>
-                <input placeholder="Prénom" type="text" id="inputPrenom">
-    
-                <p class="txtError">Truc non-valide</p>
-                <input placeholder="Email" type="text" id="inputEmail">
+                <section>
+                    <input placeholder="Nom" type="text" id="inputNom">
+                    <p class="txtError">Nom non-valide</p> 
+                </section>
+                <section>
+                    <input placeholder="Prénom" type="text" id="inputPrenom">
+                    <p class="txtError">Prénom non-valide</p> 
+                </section>
+                <section>
+                    <input placeholder="Email" type="text" id="inputEmail">
+                    <p class="txtError">Email non-valide</p>
+                </section>
 
                 <textarea placeholder="Message" id="inputMsg" cols="30" rows="10"></textarea>
-    
-                <p class="envoye">Envoyé</p>
-                <input type="submit" value="Valider">
             </form>
+            <p class="envoye">Envoyé !</p>
+            <button>Valider</button>
         </main>
     </div>
     <aside>

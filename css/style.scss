@@ -3,6 +3,7 @@ $mainColor: #FFFDD6;
 
 $txtBlue: #3C9EC8;
 $txtWhite: #FFFFFF;
+$txtError: #C11414;
 
 @mixin titleTxt{
     font-size: 40px;
@@ -12,6 +13,13 @@ $txtWhite: #FFFFFF;
 }
 @mixin errorTxt{
     font-size: 18px;
+    color: $txtError;
+}
+@mixin shadowBox {
+    border: none;
+    box-shadow: inset 0px 4px 4px 
+    rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
 }
 
 body{
@@ -21,7 +29,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: row-reverse;
-    p{
+    p, h1, h2{
         margin: 0;
         padding: 0;
     }
@@ -48,34 +56,64 @@ body{
     }
     main{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         flex-direction: column;
+        h2{
+            font-size: 60px;
+        }
         form{
-            display: flex;
-            flex-direction: column;
-            width: 75%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 10vh) 15vh;
+            width: 70%;
             height: 100%;
-            input{
-                border: none;
-                box-shadow: inset 0px 4px 4px 
-                rgba(0, 0, 0, 0.25);;
-                height: 6%;
-                border-radius: 8px;
-                &::placeholder{
+            section{
+                input[type=text]{
+                    width: 100%;
+                    height: 50%;
+                    font-family: 'El Messiri', sans-serif;
+                    @include shadowBox;
                     @include mainTxt;
+                    padding-left: 15px;
+                    display: flex;
+                    align-items: center;
+                    &::placeholder{
+                        @include mainTxt;
+                    }
+                    &:focus::placeholder{
+                        transition: 0.5s ease-in;
+                        color: transparent;
+                    }
+                }
+                .txtError{
+                    @include errorTxt;
+                }
+                .envoye{
+                    text-align: center;
                 }
             }
             textarea{
-                &::placeholder{
-                    @include mainTxt;
-                }
+                @include shadowBox;
+                @include mainTxt;
+                padding-left: 15px;
+                font-family: 'El Messiri', sans-serif;
             }
-            .txtError{
-                @include errorTxt;
-            }
-            .envoye{
-                text-align: center;
+        }
+        .envoye{
+            @include mainTxt;
+        }
+        button{
+            border: none;
+            border-radius: 10px;
+            padding: 3px 30px;
+            font-family: 'El Messiri', sans-serif;
+            font-size: 36px;
+            background-color: #1067AE;
+            color: #FFFFFF;
+            box-shadow: 0px 4px 4px #4b4b4b;
+            &:active{
+                box-shadow: inset 4px 4px 4px #4b4b4b;
             }
         }
     }
