@@ -33,9 +33,12 @@ body p, body h1, body h2 {
 }
 .mainBox main {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
   flex-direction: column;
+}
+.mainBox main .txtError, .mainBox main .txtValider {
+  visibility: hidden;
 }
 .mainBox main h2 {
   font-size: 60px;
@@ -45,7 +48,6 @@ body p, body h1, body h2 {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 10vh) 15vh;
   width: 70%;
-  height: 100%;
 }
 .mainBox main form section input[type=text] {
   width: 100%;
@@ -90,6 +92,7 @@ body p, body h1, body h2 {
   text-align: center;
 }
 .mainBox main form textarea {
+  width: 100%;
   border: none;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -97,7 +100,21 @@ body p, body h1, body h2 {
   padding-left: 15px;
   font-family: "El Messiri", sans-serif;
 }
-.mainBox main .envoye {
+.mainBox main form textarea:focus::-moz-placeholder {
+  -moz-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  color: transparent;
+}
+.mainBox main form textarea:focus:-ms-input-placeholder {
+  -ms-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  color: transparent;
+}
+.mainBox main form textarea:focus::placeholder {
+  transition: 0.5s ease-in;
+  color: transparent;
+}
+.mainBox main .txtValider {
   font-size: 24px;
 }
 .mainBox main button {
