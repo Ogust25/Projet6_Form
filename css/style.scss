@@ -96,6 +96,7 @@ body{
                 }
             }
             textarea{
+                resize: none;
                 width: 100%;
                 @include shadowBox;
                 @include mainTxt;
@@ -152,4 +153,10 @@ aside{
             color: $txtBlue;
         }
     }
+}
+@media screen and (max-width: 780px) and (min-width: 425px){
+
+}
+@media screen and (max-width: 425px){
+    
 }

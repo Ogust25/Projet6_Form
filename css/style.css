@@ -92,6 +92,7 @@ body p, body h1, body h2 {
   text-align: center;
 }
 .mainBox main form textarea {
+  resize: none;
   width: 100%;
   border: none;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
