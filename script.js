@@ -14,6 +14,8 @@ btn.addEventListener('click', function(){
 
     if((resultatNom == true)&&(resultatPrenom == true)&&(resultatEmail == true)){
         /* Valider le form */
+        document.querySelector('.txtValider').style.visibility = "visible";
+
         document.querySelector('.nomError').style.visibility = "hidden";
         document.querySelector('.prenomError').style.visibility = "hidden";
         document.querySelector('.emailError').style.visibility = "hidden";

@@ -14,21 +14,21 @@
     </header>
     <main>
         <h2>Contactez nous !</h2>
-        <form action="">
+        <form action="traitement.php" method="post">
             <section>
-                <input placeholder="Nom" type="text" id="inputNom" required>
+                <input placeholder="Nom" name="nom" type="text" id="inputNom" pattern="/^[a-zA-Z-]+$/" required>
                 <p class="nomError txtError">Nom non-valide</p> 
             </section>
             <section>
-                <input placeholder="Prénom" type="text" id="inputPrenom" required>
+                <input placeholder="Prénom" name="prenom" type="text" id="inputPrenom" pattern="/^[a-zA-Z-]+$/" required>
                 <p class="prenomError txtError">Prénom non-valide</p> 
             </section>
             <section>
-                <input placeholder="Email" type="email" id="inputEmail" required>
+                <input placeholder="Email" name="email" type="email" id="inputEmail" pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/" required>
                 <p class="emailError txtError">Email non-valide</p>
             </section>
             
-            <textarea placeholder="Message" id="inputMsg" required></textarea>
+            <textarea placeholder="Message" name="message" id="inputMsg" required></textarea>
         </form>
         <p class="txtValider">Mail envoyé !</p>
         <button class="btnValider">Valider</button>
@@ -45,8 +45,6 @@
 </body>
 </html>
 
-<!-- 
-    modif img quand desktop/tabette,tel
-    img pas propre
-    trait blanc en bas (relou)
+<!-- To do :
+    img responsive resize
 -->
