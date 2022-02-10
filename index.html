@@ -13,25 +13,27 @@
         <h1>MySite</h1>
     </header>
     <main>
-        <h2>Contactez nous !</h2>
-        <form action="traitement.php" method="post">
-            <section>
-                <input placeholder="Nom" name="nom" type="text" id="inputNom" pattern="/^[a-zA-Z-]+$/" required>
+        <!-- action="traitement.php" method="post" -->
+        <form>
+            <h2>Contactez nous !</h2>
+            <div class="boxNom">
+                <input placeholder="Nom" name="nom" type="text" id="inputNom" pattern="[a-zA-Z-]+$" required>
                 <p class="nomError txtError">Nom non-valide</p> 
-            </section>
-            <section>
-                <input placeholder="Prénom" name="prenom" type="text" id="inputPrenom" pattern="/^[a-zA-Z-]+$/" required>
+            </div>
+            <div class="boxPrenom">
+                <input placeholder="Prénom" name="prenom" type="text" id="inputPrenom" pattern="[a-zA-Z-]+$" required>
                 <p class="prenomError txtError">Prénom non-valide</p> 
-            </section>
-            <section>
-                <input placeholder="Email" name="email" type="email" id="inputEmail" pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/" required>
+            </div>
+            <div class="boxEmail">
+                <input placeholder="Email" name="email" type="email" id="inputEmail" pattern="[a-z0-9._-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" required>
                 <p class="emailError txtError">Email non-valide</p>
-            </section>
+            </div>
             
             <textarea placeholder="Message" name="message" id="inputMsg" required></textarea>
+            <p class="txtValider">Mail envoyé !</p>
+            <button class="btnValider">Valider</button>
         </form>
-        <p class="txtValider">Mail envoyé !</p>
-        <button class="btnValider">Valider</button>
+        
     </main>
     
     <aside>

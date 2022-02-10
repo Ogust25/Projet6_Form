@@ -59,22 +59,38 @@ main{
     grid-area: 2/2/3/3;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: center;
     background: $mainColor;
     .txtError, .txtValider{
         visibility: hidden;
     }
-    h2{
-        font-size: 3.5rem;
-    }
     form{
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(3, 8vh) 15vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10vh repeat(3, 8vh) 15vh repeat(2, 8vh);
         width: 70%;
-        section{
-            input[type=text], input[type=email]{
+        h2{
+            grid-area: 1/1/2/4;
+            text-align: center;
+            font-size: 3.5rem;
+        }
+        div{
+            input[type=text]{
+                width: 100%;
+                height: 60%;
+                font-family: 'El Messiri', sans-serif;
+                @include shadowBox;
+                @include mainTxt;
+                padding-left: 15px;
+                &::placeholder{
+                    @include mainTxt;
+                }
+                &:focus::placeholder{
+                    transition: 0.5s ease-in;
+                    color: transparent;
+                }
+            }
+            input[type=email]{
                 width: 100%;
                 height: 60%;
                 font-family: 'El Messiri', sans-serif;
@@ -92,11 +108,18 @@ main{
             .txtError{
                 @include errorTxt;
             }
-            .envoye{
-                text-align: center;
-            }
+        }
+        .boxNom{
+            grid-area: 2/1/3/4;
+        }
+        .boxPrenom{
+            grid-area: 3/1/4/4;
+        }
+        .boxEmail{
+            grid-area: 4/1/5/4;
         }
         textarea{
+            grid-area: 5/1/6/4;
             resize: none;
             width: 100%;
             @include shadowBox;
@@ -108,22 +131,24 @@ main{
                 color: transparent;
             }
         }
-    }
-    .txtValider{
-        @include mainTxt;
-    }
-    button{
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-        padding: 0.5% 5%;
-        font-family: 'El Messiri', sans-serif;
-        font-size: 2.25rem;
-        background-color: #1067AE;
-        color: #FFFFFF;
-        box-shadow: 0px 4px 4px #4b4b4b;
-        &:active{
-            box-shadow: inset 4px 4px 4px #4b4b4b;
+        .txtValider{
+            grid-area: 6/2/7/3;
+            text-align: center;
+            @include mainTxt;
+        }
+        button{
+            grid-area: 7/2/8/3;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            font-family: 'El Messiri', sans-serif;
+            font-size: 2.25rem;
+            background-color: #1067AE;
+            color: #FFFFFF;
+            box-shadow: 0px 4px 4px #4b4b4b;
+            &:active{
+                box-shadow: inset 4px 4px 4px #4b4b4b;
+            }
         }
     }
 }    
@@ -189,9 +214,15 @@ aside{
         }
         main{
             grid-area: 3/1/4/2;
-            
-            button{
-                margin-bottom: 25px;
+
+            form{
+                grid-template-rows: 8vh repeat(3, 8vh) 12vh repeat(2, 5vh);
+                h2{
+                    font-size: 35px;
+                }
+                button{
+                    font-size: 30px;
+                }
             }
         }
     }
@@ -199,7 +230,7 @@ aside{
 }
 @media screen and (max-width: 425px){
     body{
-        grid-template-columns: 100vw;
+        grid-template-columns: 100%;
         grid-template-rows: 10vh 30vh 60vh;
         header{
            grid-area: 1/1/2/2;
@@ -236,15 +267,16 @@ aside{
             grid-area: 3/1/4/2;
             h2{
                 font-size: 35px;
-                margin: 2px;
+                margin: 1.5px;
             }
             form{
-                grid-template-columns: 100%;
-                grid-template-rows: repeat(3, 7vh) 13vh;
-                width: 80%;
-            }
-            button{
-                margin-bottom: 15px;
+                grid-template-rows: 5vh repeat(3, 8vh) 12vh repeat(2, 5vh);
+                h2{
+                    font-size: 2em;
+                }
+                button{
+                    font-size: 25px;
+                }
             }
         }
     }
