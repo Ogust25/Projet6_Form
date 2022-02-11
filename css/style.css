@@ -163,7 +163,7 @@ main form .txtValider {
   text-align: center;
   font-size: 1.5rem;
 }
-main form button {
+main form input[type=submit] {
   grid-area: 7/2/8/3;
   cursor: pointer;
   border: none;
@@ -174,7 +174,7 @@ main form button {
   color: #FFFFFF;
   box-shadow: 0px 4px 4px #4b4b4b;
 }
-main form button:active {
+main form input[type=submit]:active {
   box-shadow: inset 4px 4px 4px #4b4b4b;
 }
 
@@ -248,7 +248,7 @@ aside div a[href]:hover {
   body main form h2 {
     font-size: 35px;
   }
-  body main form button {
+  body main form input[type=submit] {
     font-size: 30px;
   }
 }
@@ -301,7 +301,7 @@ aside div a[href]:hover {
   body main form h2 {
     font-size: 2em;
   }
-  body main form button {
+  body main form input[type=submit] {
     font-size: 25px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -136,7 +136,7 @@ main{
             text-align: center;
             @include mainTxt;
         }
-        button{
+        input[type=submit]{
             grid-area: 7/2/8/3;
             cursor: pointer;
             border: none;
@@ -220,7 +220,7 @@ aside{
                 h2{
                     font-size: 35px;
                 }
-                button{
+                input[type=submit]{
                     font-size: 30px;
                 }
             }
@@ -274,7 +274,7 @@ aside{
                 h2{
                     font-size: 2em;
                 }
-                button{
+                input[type=submit]{
                     font-size: 25px;
                 }
             }

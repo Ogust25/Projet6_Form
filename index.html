@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
+    <meta name="description" content="Formulaire de contact | 1er contact avec php | aled">
 </head>
 <body>
     <header>
         <h1>MySite</h1>
     </header>
     <main>
-        <!-- action="traitement.php" method="post" -->
-        <form>
+        <form action="traitement.php" method="post">
             <h2>Contactez nous !</h2>
             <div class="boxNom">
                 <input placeholder="Nom" name="nom" type="text" id="inputNom" pattern="[a-zA-Z-]+$" required>
@@ -31,7 +31,7 @@
             
             <textarea placeholder="Message" name="message" id="inputMsg" required></textarea>
             <p class="txtValider">Mail envoyé !</p>
-            <button class="btnValider">Valider</button>
+            <input type="submit" class="btnValider" value="Valider">
         </form>
         
     </main>
