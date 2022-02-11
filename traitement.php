@@ -1,7 +1,7 @@
 <?php
 
-$regleNomPrenom = "/^[a-zA-Z-]+$/";
-$regleEmail = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/";
+$regleNomPrenom = "/^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ'-]+$/";
+$regleEmail = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/";
 
 if((((isset($_POST['nom']))||(empty($_POST['nom']))))&&(preg_match($regleNomPrenom, $_POST['nom']))){
     $nom = $_POST['nom'];
@@ -16,10 +16,13 @@ if((isset($_POST['message']))||(empty($_POST['message']))){
     $message = $_POST['message'];
 }
 
-echo $nom, " ",$prenom, " ",$email, " ",$message;
+if(($nom == true)&&($prenom == true)&&($email == true)&&($message == true)){
+    mail("sxxasif@leadwizzer.com", "Bonjour, $prenom", $message, "From: $email");
+}
 
-/* mail($email, "Oui", $message, 'From: webmaster@example.com'); */
+
 
 ?>
 
 
+<!-- modif regex textarea -->
