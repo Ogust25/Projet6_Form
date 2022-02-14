@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/media/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <meta name="description" content="Formulaire de contact | 1er contact avec php | aled">
+    <meta name="description" content="Formulaire de contact | 1er formulaire avec php | aled">
 </head>
 <body>
     <header>
         <h1>MySite</h1>
     </header>
     <main>
-        <form action="traitement.php" method="post">
+        <form method="post">
             <h2>Contactez nous !</h2>
             <div class="boxNom">
                 <input placeholder="Nom" name="nom" type="text" id="inputNom" pattern="[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ'-]+$" required>
@@ -30,10 +31,9 @@
             </div>
             
             <textarea placeholder="Message" name="message" id="inputMsg" required></textarea>
-            <p class="txtValider">Mail envoyé !</p>
+            <p class="txtValider"></p>
             <input type="submit" class="btnValider" value="Valider">
         </form>
-        
     </main>
     
     <aside>

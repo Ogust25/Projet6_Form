@@ -207,7 +207,7 @@ aside div a[href] {
 }
 aside div a[href]:hover {
   text-decoration: underline;
-  color: #3C9EC8;
+  color: #1067AE;
 }
 
 @media screen and (max-width: 780px) and (min-width: 425px) {
